@@ -1,5 +1,4 @@
-
-    let cartItems = [];
+let cartItems = [];
 
 function addToCart(product, price) {
     cartItems.push({product, price});
