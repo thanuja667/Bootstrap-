@@ -1,4 +1,4 @@
-<script >
+
     let cartItems = [];
 
 function addToCart(product, price) {
@@ -31,4 +31,3 @@ function checksout() {
     alert('Thank you for your purchase!');
 }
 
-    </script>
