@@ -9,7 +9,7 @@
 <body>
     <div class="container-fluid p-5 bg-primary text-white text-center">
         <h1><mark>Bootstrap Framework</mark></h1><br>  
-       <h1><mark>Login</mark></h1>
+       <h1>Login</h1>
         <form onsubmit="return login">
             <input type="text" id="username" placeholder="Username" required><br>
             <input type="password" id="password" placeholder="Password" required><br>
@@ -18,9 +18,9 @@
         <p>Don't have an account? <a href="#" onclick="showRegistration()">Register here</a></p>
     </div>
     <div  class="text-white text-center bg-success">
-        <h1><mark>Register</mark></h1>
+        <h1>Register</h1>
         <form onsubmit="return register()">
-            <input type="text" id="regUsername" placeholder="Username" required><br>
+            <label>email:<input type="text" id="regUsername" placeholder="Username" required><br></label>
             <input type="password" id="regPassword" placeholder="Password" required><br>
             <input type="date" id="regdate" placeholder="date" required><br> 
             <label for="email">Enter your email:</label>
@@ -30,8 +30,8 @@
 
         <p>Already have an account? <a href="#" onclick="showLogin()">Login here</a></p>
     </div>
-	<div id="main-section" class="hidden">
-        <h1><mark>Shopping Cart</mark></h1>
+	<div class ="hidden">
+        <h1><Shopping Cart</h1>
 
 	<div class="products">
         <div class="text-bg-info text-center">
@@ -74,6 +74,7 @@
             <button class="add-to-cart" onclick="addToCart('WATCH', 5000)">Add to Cart</button>
         </div>
 </div>
+	</Shopping>
 	
         <div class="cart">
             <h2>Shopping Cart</h2>
