@@ -34,4 +34,3 @@ function updateCart() {
 function checksout() {
     alert('Thank you for your purchase!');
 }
-
