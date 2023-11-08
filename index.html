@@ -15,63 +15,63 @@
             <input type="password" id="password" placeholder="Password" required><br>
             <button type="submit">Login</button>
         </form>
-        <p>Don't have an account? <a href="#" onclick="showRegistration()">Register here</a></p>
-    </div>
-    <div  class="text-white text-center bg-success">
-        <h1><mark>Register</mark></h1>
-        <form onsubmit="return register()">
-            <input type="text" id="regUsername" placeholder="Username" required><br>
-            <input type="password" id="regPassword" placeholder="Password" required><br>
-            <input type="date" id="regdate" placeholder="date" required><br> 
-            <label for="email">Enter your email:</label>
-            <input type="email" id="email" name="email">
-            <button type="submit">Register</button>
-        </form>
-
-        <p>Already have an account? <a href="#" onclick="showLogin()">Login here</a></p>
+        <p>Don't have an account? <a href="#" onclick="showRegistration()"></a></p>
+        <div  class="text-white text-center bg-success">
+            <h1><mark>Register</mark></h1>
+            <form onsubmit="return register()">
+                <input type="text" id="regUsername" placeholder="Username" required><br>
+                <input type="password" id="regPassword" placeholder="Password" required><br>
+                <input type="date" id="regdate" placeholder="date" required><br> 
+                <label for="email">Enter your email:</label>
+                <input type="email" id="email" name="email">
+                <button type="submit">Register</button>
+            </form>
+        
+            <p>Already have an account? <a href="#" onclick="showLogin()">Login here</a></p>
+        </div>
     </div>
 	<div id="main-section" class="hidden">
         <h1><mark>Shopping Cart</mark></h1>
 
 	<div class="products">
         <div class="text-bg-info text-center">
-            <h2>SAREE</h2>
-            <p>Price: $1200</p>
-        <img src="saree.jpeg"><height="50px></height>"<width="50px"></width>
-        <p>100% wax free,good source of vitamin c,dietary fiber</p>
-            <button class="add-to-cart" onclick="addToCart('APPLE', 10)">Add to Cart</button>
+            <h2>WATCH</h2>
+            <p>Price: $1500</p>
+        <img src="watch.jpeg" width="200" height="200"></img>
+        <p>Classic you can wear,like to watch the best.stylish and gold shined watch.</p>
+            <button class="add-to-cart" onclick="addToCart('WATCH', 150)">Add to Cart</button>
         </div>
 
         <div class="text-bg-warning text-center">
             <h2>HANDBAG</h2>
-            <p>Price: $2000</p>
-            <img src ="handbag.jpeg"><height="50px></height>"<width="50px"></width>
-            <p>naturally flavoured,aromatic and sweeter compared to regular bananas</p>
-            <button class="add-to-cart" onclick="addToCart('BANANA', 20)">Add to Cart</button>
+            <p>Price: $1000</p>
+            <img src ="handbag.jpeg" width="200" height="200"></img>
+            <p>100% elegant and stylish earpods.</p>
+            <button class="add-to-cart" onclick="addToCart('EARPODS', 100)">Add to Cart</button>
         </div>
     	</div>
         <div class="text-bg-danger text-center">
-            <h2>SHOES</h2>
-            <p>Price: $3000</p>
-            <img src="shoes.jpeg"><height="50px></height>"<width="50px"></width>
-            <p>fresh,hygenic and natural . Rich in vitamin A,C,folate and fiber</p>
-            <button class="add-to-cart" onclick="addToCart('GAUVA', 30)">Add to Cart</button>
+            <h2>SAREE</h2>
+            <p>Price: $1000</p>
+            <img src="saree.jpeg"  width="200" height="200"></img>
+            <p>presenting to you,this fashion-forward shirt.</p>
+            <button class="add-to-cart" onclick="addToCart('SHIRT', 100)">Add to Cart</button>
         </div>
     	</div>
         <div class="text-bg-secondary text-center">
             <h2>LEHENGA</h2>
-            <p>Price: $4000</p>
-            <img src="lehenga.jpeg"><height="50px></height>"<width="50px"></width>
-            <p>this provides 50% of your daily vitamin C, 8% of your daily vitamin A and 8% of your daily vitaminB6</p>
-            <button class="add-to-cart" onclick="addToCart('MANGO', 40)">Add to Cart</button>
+            <p>Price: $1500</p>
+            <img src="lehenga.jpeg"  width="200" height="200"></img>
+            <p>most attractive and elegant handbag.</p>
+            <button class="add-to-cart" onclick="addToCart('HANDBAG', 150)">Add to Cart</button>
         </div>
     	</div>
         <div class="text-bg-primary text-center">
-            <h2>WATCH</h2>
-            <p>Price: $5000</p>
-            <img src="watch.jpeg"><height="50px></height>"<width="50px"></width>
-            <p>strawberries are smart fruit for choice for diabetics and one of the healthiest fruit</p>
-            <button class="add-to-cart" onclick="addToCart('STRAWBERRY', 50)">Add to Cart</button>
+            <h2>SHOES</h2>
+            <p>Price: $2000</p>
+            <img src="shoes.jpeg"  width="200" height="200"></img>
+            <p>The world is at your feet,so make sure you're wearing great shoes.</p>
+            <button class="add-to-cart" onclick="addToCart('SHOES', 200)">Add to Cart</button>
         </div>
     	</div>
         <div class="cart">
@@ -82,37 +82,40 @@
         </div>
     </div>
 
-
-<script >
-    let cartItems = [];
-
-function addToCart(product, price) {
-    cartItems.push({product, price});
-    updateCart();
-}
-
-function updateCart() {
-    let cartList = document.getElementById("cart-items");
-    let totalElement = document.getElementById("total");
-    let total = 0;
-
-    cartList.innerHTML = "";
-    cartItems.forEach(item => {
-        let listItem = document.createElement("li");
-        listItem.innerText = ${item.product} - $${item.price};
-        cartList.appendChild(listItem);
-        total += item.price;
-    });
-
-    totalElement.innerText = total;
-}
-// Add product and cart logic similar to the previous example
-
-function checksout() {
-    alert('Thank you for your purchase!');
-}
-
-    </script>
+    <script >
+        let cartItems = [];
+    
+    function addToCart(product, price) {
+        cartItems.push({product, price});
+        updateCart();
+    }
+    
+    function updateCart() {
+        let cartList = document.getElementById("cart-items");
+        let totalElement = document.getElementById("total");
+        let total = 0;
+    
+        cartList.innerHTML = "";
+        cartItems.forEach(item => {
+            let listItem = document.createElement("li");
+            listItem.innerText = `${item.product} - $${item.price}`;
+            cartList.appendChild(listItem);
+            total += item.price;
+        });
+    
+        totalElement.innerText = total;
+    }
+    
+    
+    
+    
+    // Add product and cart logic similar to the previous example
+    
+    function checksout() {
+        alert('Thank you for your purchase!');
+    }
+    
+        </script>
 
 
 </body>
